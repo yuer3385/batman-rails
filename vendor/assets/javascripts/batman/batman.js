@@ -901,6 +901,7 @@
       }
     },
     error: function(message) {
+    	alert(message)
       throw new developer.DevelopmentError(message);
     },
     assert: function(result, message) {
