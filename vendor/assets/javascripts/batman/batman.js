@@ -8953,7 +8953,7 @@
 
     Navigator.prototype.handleLocation = function(location) {
       var path;
-      path = this.pathFromLocation(location);
+      path = Batman.PushStateNavigator.prototype.pathFromLocation(location);
       if (path === this.cachedPath) {
         return;
       }
@@ -9176,7 +9176,7 @@
 
     HashbangNavigator.prototype.handleLocation = function(location) {
       var pushStatePath;
-      if (!Batman.config.usePushState) {
+      if (true) {
         return HashbangNavigator.__super__.handleLocation.apply(this, arguments);
       }
       pushStatePath = Batman.PushStateNavigator.prototype.pathFromLocation(location);
